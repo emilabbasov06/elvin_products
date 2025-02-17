@@ -35,3 +35,12 @@ class IstilikVeHavalandirmaModel(Base):
   id = Column(Integer, primary_key=True, autoincrement=True)
   name = Column(String(255))
   price = Column(Float)
+
+
+class UserModel(Base):
+  __tablename__ = 'users'
+  
+  id = Column(Integer, primary_key=True, autoincrement=True)
+  name = Column(String(255))
+  email = Column(String(255), unique=True)
+  password = Column(String(255))
